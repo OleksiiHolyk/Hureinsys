@@ -1,4 +1,4 @@
-package entity.user;
+package ua.com.hureinsys.entity.user;
 
 /**
  * Created by Oleksii on 22.12.2015.

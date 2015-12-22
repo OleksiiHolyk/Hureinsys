@@ -1,4 +1,4 @@
-package util;
+package ua.com.hureinsys.util;
 
 import java.util.List;
 

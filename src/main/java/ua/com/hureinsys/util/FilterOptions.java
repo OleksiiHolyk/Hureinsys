@@ -1,4 +1,4 @@
-package util;
+package ua.com.hureinsys.util;
 
 /**
  * Created by Oleksii on 22.12.2015.

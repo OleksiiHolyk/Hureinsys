@@ -1,4 +1,4 @@
-package entity.user;
+package ua.com.hureinsys.entity.user;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

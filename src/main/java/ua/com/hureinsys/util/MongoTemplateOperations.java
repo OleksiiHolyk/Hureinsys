@@ -1,4 +1,4 @@
-package util;
+package ua.com.hureinsys.util;
 
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;

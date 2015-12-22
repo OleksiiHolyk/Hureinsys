@@ -1,10 +1,10 @@
-package service;
+package ua.com.hureinsys.service;
 
-import dao.user.UserRepository;
-import entity.user.User;
+import ua.com.hureinsys.dao.user.UserRepository;
+import ua.com.hureinsys.entity.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import util.EntityPage;
-import util.FilterOptions;
+import ua.com.hureinsys.util.EntityPage;
+import ua.com.hureinsys.util.FilterOptions;
 
 /**
  * Created by Oleksii on 22.12.2015.

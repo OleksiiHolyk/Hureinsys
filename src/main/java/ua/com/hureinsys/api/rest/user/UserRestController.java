@@ -1,7 +1,7 @@
-package api.rest.user;
+package ua.com.hureinsys.api.rest.user;
 
-import entity.user.User;
-import entity.user.UserRole;
+import ua.com.hureinsys.entity.user.User;
+import ua.com.hureinsys.entity.user.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,10 +12,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import service.UsersService;
-import util.CreatedObjResponse;
-import util.EntityPage;
-import util.FilterOptions;
+import ua.com.hureinsys.service.UsersService;
+import ua.com.hureinsys.util.CreatedObjResponse;
+import ua.com.hureinsys.util.EntityPage;
+import ua.com.hureinsys.util.FilterOptions;
 
 import java.util.HashSet;
 

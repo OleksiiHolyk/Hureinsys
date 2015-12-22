@@ -1,16 +1,15 @@
-package dao.user;
+package ua.com.hureinsys.dao.user;
 
 import com.mongodb.WriteResult;
-import dao.user.UserRepository;
-import entity.user.User;
+import ua.com.hureinsys.entity.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
-import util.EntityPage;
-import util.FilterOptions;
-import util.MongoTemplateOperations;
+import ua.com.hureinsys.util.EntityPage;
+import ua.com.hureinsys.util.FilterOptions;
+import ua.com.hureinsys.util.MongoTemplateOperations;
 
 import javax.annotation.PostConstruct;
 

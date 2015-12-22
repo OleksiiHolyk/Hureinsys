@@ -1,8 +1,8 @@
-package service;
+package ua.com.hureinsys.service;
 
-import entity.user.User;
-import util.EntityPage;
-import util.FilterOptions;
+import ua.com.hureinsys.entity.user.User;
+import ua.com.hureinsys.util.EntityPage;
+import ua.com.hureinsys.util.FilterOptions;
 
 /**
  * Created by Oleksii on 22.12.2015.
