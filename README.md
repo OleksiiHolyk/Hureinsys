@@ -1,6 +1,6 @@
 Hureinsys
-Hureinsys - is a HU_man RE_sources IN_formation SYS_tem.
 =======
+Hureinsys - is a HU_man RE_sources IN_formation SYS_tem.
 
 HR System developed with the following capabilities: Employee Self Service, Travel Claim, Leave Application, Overtime Claim, Training Request, Skills Audit, Grievience Claim, Bonus Spread.
 
