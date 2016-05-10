@@ -10,4 +10,4 @@ System Administration, System master data maintenance and general system mainten
 
 need to add
 ======
-[architecture style REST API, Spring REST] [2fa with qr code] [ScribeJava, OAuth] [Spring DATA] [Spring MVC] [Spring Security] [internationalization] [heroku] [Apache Tiles]
+[architecture style REST API, Spring REST] [2fa with qr code] [ScribeJava, OAuth] [Spring DATA] [Spring MVC] [Spring Security] [internationalization] [heroku] [Apache Tiles] [ssl-certificate]
