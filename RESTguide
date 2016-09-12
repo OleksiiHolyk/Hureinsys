@@ -1,0 +1,5 @@
+[GET] http://localhost:8080/users - get all users
+[POST] http://localhost:8080/users - add new user
+[DELETE] http://localhost:8080/users/{userID} - remove user from db by {userID}
+[PUT] replace
+[PATCH] update
