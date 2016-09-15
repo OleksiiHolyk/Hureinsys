@@ -1,8 +1,16 @@
-$(document).ready(function () {
-    var menuId = $("ul.nav").first().attr("id");
+/**
+ * Created by Oleksii on 13.09.2016.
+ */
 
-    $.ajax({
-        method: "DELETE",
-        url: "http://localhost:8080/users/573317c4c2ae6411a866dd2c"
+$(document).ready(function () {
+    $("#buttonSubmit").click(function () {
+        $.ajax({
+            method: "DELETE",
+            url: "/users/" + $('#userIdInput').val()
+        }).done(function () {
+            alert("User successfully deleted.")
+        }).fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
     });
 });

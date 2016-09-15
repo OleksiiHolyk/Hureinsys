@@ -2,14 +2,23 @@
  * Created by Oleksii on 13.09.2016.
  */
 $(document).ready(function () {
-    $.ajax({
-        url: "/users",
-        dataType: "JSON",
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-            "username": "john",
-            "email": "lennon"
-        })
+    $("#buttonSubmit").click(function () {
+        $.ajax({
+            url: "/users",
+            dataType: "JSON",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                "phoneNumber": $("#phoneNumberInput").val(),
+                "username": $("#usernameInput").val(),
+                "email": $("#emailInput").val(),
+                "password": $("#passwordInput").val()
+            })
+        }).done(function (msg) {
+            console.log(msg);
+            alert("User " + msg.username + " is successfully added.");
+        }).fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
     });
 });
