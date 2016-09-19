@@ -12,34 +12,32 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-/*        http
-                .authorizeRequests()
-                    .antMatchers("/images*//**","/css*//**","/js*//**").permitAll()
-                    .anyRequest().authenticated()
-                .and()
-                    .formLogin().loginPage("/login").permitAll()
-                .and()
-                    .logout().permitAll();*/
-
-
-
-//permitAll
         http
                 .authorizeRequests()
-                    .antMatchers("/users/**").hasRole("USER")
-                    .anyRequest().permitAll()
+                .antMatchers("/js/**", "/css/**", "/images/**").permitAll()
+                .anyRequest().fullyAuthenticated()
                 .and()
-                    .httpBasic()
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/", true)
+                .failureUrl("/login?error")
+                .permitAll()
                 .and()
-                    .csrf().disable();
+                .logout()
+                .logoutUrl("/logout")
+                .invalidateHttpSession(true)
+                .logoutSuccessUrl("/")
+                .deleteCookies("JSESSIONID")
+                .and()
+                .csrf().disable();
     }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("ben").password("ben").authorities("ROLE_USER")
+                .withUser("hilary").password("hilary").roles("ADMIN", "USER")
                 .and()
-                .withUser("den").password("den").authorities("ROLE_USER", "ROLE_ADMIN");
+                .withUser("donald").password("donald").roles("USER");
     }
 }
