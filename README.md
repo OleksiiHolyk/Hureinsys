@@ -1,6 +1,7 @@
 **Hureinsys**
 -
 Hureinsys - is a HU_man RE_sources IN_formation SYS_tem.
+Availble at http://hureinsys.herokuapp.com/
 
 HR System developed with the following capabilities:
 - Employee Self Service,
