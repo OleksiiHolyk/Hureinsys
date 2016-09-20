@@ -30,3 +30,7 @@ body {
 input {
     color: #000 !important;
 }
+
+.centered input[type="submit"] {
+    margin: 10px 0;
+}

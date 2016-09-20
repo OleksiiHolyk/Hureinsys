@@ -14,22 +14,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/js/**", "/css/**", "/images/**").permitAll()
-                .anyRequest().fullyAuthenticated()
+                    .antMatchers("/js/**", "/css/**", "/images/**", "/favicon.ico").permitAll()
+                    .anyRequest().fullyAuthenticated()
                 .and()
-                .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/", true)
-                .failureUrl("/login?error")
-                .permitAll()
+                    .formLogin()
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/", true)
+                    .failureUrl("/login?error").permitAll()
                 .and()
-                .logout()
-                .logoutUrl("/logout")
-                .invalidateHttpSession(true)
-                .logoutSuccessUrl("/")
-                .deleteCookies("JSESSIONID")
+                    .logout()
+                    .logoutUrl("/logout")
+                    .invalidateHttpSession(true)
+                    .logoutSuccessUrl("/")
+                    .deleteCookies("JSESSIONID")
                 .and()
-                .csrf().disable();
+                    .csrf().disable();
     }
 
     @Autowired

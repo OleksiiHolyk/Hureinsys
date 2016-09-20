@@ -16,7 +16,7 @@ $(document).ready(function () {
             })
         }).done(function (msg) {
             console.log(msg);
-            alert("User " + msg.username + " is successfully added.");
+            alert("User " + msg.username + " is successfully added. User ID="+msg._links.user.href);
         }).fail(function (jqXHR, textStatus) {
             alert("Request failed: " + textStatus);
         });
