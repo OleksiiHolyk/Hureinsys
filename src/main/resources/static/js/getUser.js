@@ -42,10 +42,10 @@ function getUsers() {
 }
 
 function pasteUsers(user) {
-    $('#phoneNumber .val').append(user.phoneNumber).appendTo('.getUsers');
-    $('#username .val').append(user.username).appendTo('.getUsers');
-    $('#email .val').append(user.email).appendTo('.getUsers');
-    $('#password .val').append(user.password).appendTo('.getUsers');
+    $('#phoneNumber .val').append(user.phoneNumber);
+    $('#username .val').append(user.username);
+    $('#email .val').append(user.email);
+    $('#password .val').append(user.password);
 }
 
 
