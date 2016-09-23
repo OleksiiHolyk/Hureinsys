@@ -15,8 +15,7 @@ import java.util.List;
 * Delete - DELETE*/
 
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
-public interface UsersRepository extends MongoRepository<User, String> {
+public interface UserRepository extends MongoRepository<User, String> {
 
-	List<User> findByUsername(@Param("name") String name);
-
+	public User findByUsername(String username);
 }

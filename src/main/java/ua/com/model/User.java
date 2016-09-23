@@ -5,7 +5,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Set;
+
+import static ua.com.model.UserRole.ROLE_USER;
 
 /**
  * Created by Oleksii on 10.05.2016.
@@ -19,12 +20,13 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private Set<UserRole> userRoles;
+    private UserRole role;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Long createdDate;
 
     public User() {
         this.createdDate = LocalDateTime.now().toInstant(ZoneOffset.UTC).toEpochMilli();
+        this.role = ROLE_USER;
     }
 
     public String getId() {
@@ -67,12 +69,12 @@ public class User {
         this.password = password;
     }
 
-    public Set<UserRole> getUserRoles() {
-        return userRoles;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setUserRoles(Set<UserRole> userRoles) {
-        this.userRoles = userRoles;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 
     public Long getCreatedDate() {
