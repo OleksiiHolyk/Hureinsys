@@ -52,11 +52,12 @@ function clearFormFields() {
 
 $(document).ready(function () {
     $("#butGetUserById").click(function () {
-        if($('#userIdInput').val()===''){
+        if ($('#userIdInput').val() === '') {
             alert("field with ID must not be empty")
-        } else
-        clearFormFields();
-        getUserById();
+        } else {
+            clearFormFields();
+            getUserById();
+        }
     });
 
     $("#butGetUsers").click(function () {
