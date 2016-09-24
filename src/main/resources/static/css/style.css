@@ -27,10 +27,17 @@ body {
     vertical-align: middle;
 }
 
-input {
-    color: #000 !important;
-}
+
 
 .centered input[type="submit"] {
     margin: 10px 0;
+}
+
+/*Change bootstrap classes*/
+input {
+    color: #000;
+}
+
+.form-control, .btn {
+    border-radius: 3px;
 }

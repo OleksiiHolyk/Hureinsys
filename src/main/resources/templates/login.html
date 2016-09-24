@@ -3,9 +3,10 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Hureinsys</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../css/style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../css/style.css"/>
+
 
 </head>
 <body>
@@ -18,9 +19,9 @@
 
 <div class="centered">
     <form th:action="@{/login}" method="post" id="mini">
-        <div id="username"><label for="usernameInput" class="col-md-5">Username:</label><input id="usernameInput" class="col-md-7" type="text" name="username"/></div>
-        <div id="password"><label for="passwordInput" class="col-md-5">Password:</label><input id="passwordInput" class="col-md-7" type="password" name="password"/></div>
-        <div><input type="submit" value="Sign In" style="float: right"/></div>
+        <div id="username"><label for="usernameInput" class="control-label">Username:</label><input id="usernameInput" class="form-control" type="text" name="username"/></div>
+        <div id="password"><label for="passwordInput" class="control-label">Password:</label><input id="passwordInput" class="form-control" type="password" name="password"/></div>
+        <div><input type="submit" value="Sign In" class="btn btn-regular "/></div>
     </form>
 </div>
 </body>
