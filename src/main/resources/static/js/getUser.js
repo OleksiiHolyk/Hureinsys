@@ -34,12 +34,26 @@ function getUsers() {
 }
 
 function pasteUsers(user) {
-    var r1, r2, r3, r4;
-    r1 = $('<div></div>').addClass('phoneNumber').append().append(user.phoneNumber);
-    r2 = $('<div></div>').addClass('username').append(user.username);
-    r3 = $('<div></div>').addClass('email').append(user.email);
-    r4 = $('<div></div>').addClass('password').append(user.password);
-    $('<div></div>').addClass('row').append(r1).append(r2).append(r3).append(r4).appendTo(document.getElementById('usersList'));
+    var row1, row2, row3, row4;
+    row1 = $('<div></div>').addClass('phoneNumber');
+    $('<span></span>').addClass('fld').append("Phone number: ").appendTo(row1);
+    $('<span></span>').addClass('val').append(user.phoneNumber).appendTo(row1);
+
+    row2 = $('<div></div>').addClass('username');
+    $('<span></span>').addClass('fld').append("Username: ").appendTo(row2);
+    $('<span></span>').addClass('val').append(user.username).appendTo(row2);
+
+    row3 = $('<div></div>').addClass('email');
+    $('<span></span>').addClass('fld').append("Email: ").appendTo(row3);
+    $('<span></span>').addClass('val').append(user.email).appendTo(row3);
+
+    row4 = $('<div></div>').addClass('password');
+    $('<span></span>').addClass('fld').append("Password: ").appendTo(row4);
+    $('<span></span>').addClass('val').append(user.password).appendTo(row4);
+
+    $('<div></div>').addClass('row')
+        .append(row1).append(row2).append(row3).append(row4)
+        .appendTo(document.getElementById('usersList'));
 }
 
 function clearFormFields() {
